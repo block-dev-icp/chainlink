@@ -13,6 +13,7 @@ COPY tools/bin/ldflags ./tools/bin/
 ADD go.mod go.sum ./
 RUN --mount=type=secret,id=GIT_AUTH_TOKEN \
     --mount=type=cache,target=/go/pkg/mod \
+    ./plugins/scripts/setup_git_auth.sh && \
     GOPRIVATE=github.com/smartcontractkit/* go mod download
 COPY . .
 
