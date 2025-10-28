@@ -12,7 +12,8 @@ COPY tools/bin/ldflags ./tools/bin/
 
 ADD go.mod go.sum ./
 RUN --mount=type=cache,target=/go/pkg/mod \
-    go mod download
+    --mount=type=secret,id=GIT_AUTH_TOKEN \
+    GOPRIVATE=github.com/smartcontractkit/* go mod download
 COPY . .
 
 # Install Delve for debugging with cache mounts
@@ -53,11 +54,12 @@ RUN --mount=type=cache,target=/go/pkg/mod \
 
 # Build chainlink.
 RUN --mount=type=cache,target=/go/pkg/mod \
+    --mount=type=secret,id=GIT_AUTH_TOKEN \
     --mount=type=cache,target=/root/.cache/go-build \
     if [ "$CL_IS_PROD_BUILD" = "false" ]; then \
-          GOBIN=/gobins make install-chainlink-dev; \
+          GOPRIVATE=github.com/smartcontractkit/* GOBIN=/gobins make install-chainlink-dev; \
       else \
-          GOBIN=/gobins make install-chainlink; \
+          GOPRIVATE=github.com/smartcontractkit/* GOBIN=/gobins make install-chainlink; \
       fi
 
 ##
