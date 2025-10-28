@@ -14,7 +14,8 @@ COPY tools/bin/ldflags ./tools/bin/
 
 ADD go.mod go.sum ./
 RUN --mount=type=cache,target=/go/pkg/mod \
-    go mod download
+    --mount=type=secret,id=GIT_AUTH_TOKEN \
+    GOPRIVATE=github.com/smartcontractkit/*  go mod download
 COPY . .
 
 # Install Delve for debugging with cache mounts
