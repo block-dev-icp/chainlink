@@ -11,8 +11,8 @@ COPY GNUmakefile package.json ./
 COPY tools/bin/ldflags ./tools/bin/
 
 ADD go.mod go.sum ./
-RUN --mount=type=cache,target=/go/pkg/mod \
-    --mount=type=secret,id=GIT_AUTH_TOKEN \
+RUN --mount=type=secret,id=GIT_AUTH_TOKEN \
+    --mount=type=cache,target=/go/pkg/mod \
     GOPRIVATE=github.com/smartcontractkit/* go mod download
 COPY . .
 
