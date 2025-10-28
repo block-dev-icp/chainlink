@@ -135,6 +135,12 @@ func Test_CRE_V2_Suite(t *testing.T) {
 
 		ExecuteConsensusTest(t, testEnv)
 	})
+
+	t.Run("[v2] Log Streaming - "+topology, func(t *testing.T) {
+		testEnv := t_helpers.SetupTestEnvironmentWithConfig(t, t_helpers.GetDefaultTestConfig(t), append(v2RegistriesFlags, "--with-dashboards")...)
+
+		ExecuteLogStreamingTest(t, testEnv)
+	})
 }
 
 func Test_CRE_V2_EVM_Suite(t *testing.T) {
