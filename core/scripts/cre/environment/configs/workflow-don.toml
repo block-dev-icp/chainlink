@@ -78,6 +78,7 @@
       ChipIngressInsecureConnection = true
       TraceSampleRatio = 1
       HeartbeatInterval = '30s'
+      LogStreamingEnabled = true
 
       [CRE]
       EnableDKGRecipient = true
@@ -111,6 +112,7 @@
       InsecureConnection = true
       TraceSampleRatio = 1
       HeartbeatInterval = '30s'
+      LogStreamingEnabled = true
 
       [CRE]
       EnableDKGRecipient = true
@@ -144,6 +146,7 @@
       InsecureConnection = true
       TraceSampleRatio = 1
       HeartbeatInterval = '30s'
+      LogStreamingEnabled = true
 
       [CRE]
       EnableDKGRecipient = true
@@ -177,6 +180,7 @@
       InsecureConnection = true
       TraceSampleRatio = 1
       HeartbeatInterval = '30s'
+      LogStreamingEnabled = true
 
       [CRE]
       EnableDKGRecipient = true
@@ -210,6 +214,7 @@
       InsecureConnection = true
       TraceSampleRatio = 1
       HeartbeatInterval = '30s'
+      LogStreamingEnabled = true
 
       [CRE]
       EnableDKGRecipient = true
