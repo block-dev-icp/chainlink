@@ -46,7 +46,7 @@ require (
 	github.com/smartcontractkit/chainlink-ccip v0.1.1-solana.0.20251006204220-06f2720ee9a0
 	github.com/smartcontractkit/chainlink-common v0.9.6-0.20251010025452-96327b3f910f
 	github.com/smartcontractkit/chainlink-data-streams v0.1.5
-	github.com/smartcontractkit/chainlink-deployments-framework v0.59.2-0.20251028233903-787dae590708
+	github.com/smartcontractkit/chainlink-deployments-framework v0.59.2-0.20251029191239-cc2c0b1c489c
 	github.com/smartcontractkit/chainlink-evm v0.3.4-0.20251007172225-ba2f4b5ef962
 	github.com/smartcontractkit/chainlink-evm/gethwrappers v0.0.0-20251003185510-17234095940f
 	github.com/smartcontractkit/chainlink-protos/cre/go v0.0.0-20250911124514-5874cc6d62b2
