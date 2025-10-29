@@ -46,10 +46,7 @@ plugins:
   solana:
     - moduleURI: "github.com/smartcontractkit/chainlink-internal-solana"
       gitRef: "v0.0.0-20251028194839-4f1e867301c2"
-      installPath: "./pkg/solana/cmd/chainlink-internal-solana"
-    - moduleURI: "github.com/smartcontractkit/chainlink-internal-solana"
-      gitRef: "v0.0.0-20251028194839-4f1e867301c2"
-      installPath: "./pkg/solana/cmd/chainlink-solana" # not sure if the installPath should be the one with -internal- or not, so including it twice
+      installPath: "./pkg/solana/cmd/chainlink-solana"
   mock:
     - moduleURI: "github.com/smartcontractkit/capabilities/mock"
       gitRef: "d6e7ca9fff3435bc1f3fc61dcc5b13e983065b98"
