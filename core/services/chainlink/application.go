@@ -30,7 +30,6 @@ import (
 
 	"github.com/smartcontractkit/chainlink-common/pkg/beholder"
 	"github.com/smartcontractkit/chainlink-common/pkg/billing"
-	"github.com/smartcontractkit/chainlink-common/pkg/chipingress"
 	"github.com/smartcontractkit/chainlink-common/pkg/custmsg"
 	"github.com/smartcontractkit/chainlink-common/pkg/loop"
 	nodeauthjwt "github.com/smartcontractkit/chainlink-common/pkg/nodeauth/jwt"
@@ -441,12 +440,7 @@ func NewApplication(ctx context.Context, opts ApplicationOpts) (Application, err
 		globalLogger.Info("Nurse service (automatic pprof profiling) is disabled")
 	}
 
-	var chipIngressClient chipingress.Client
-	if cfg.TelemetryIngress().ChipIngressEnabled() {
-		globalLogger.Info("ChIP Ingress is enabled for telemetry")
-		chipIngressClient = beholder.GetClient().Chip
-	}
-	telemetryManager := telemetry.NewManager(cfg.TelemetryIngress(), csaKeystore, globalLogger, chipIngressClient)
+	telemetryManager := telemetry.NewManager(cfg.TelemetryIngress(), csaKeystore, globalLogger)
 	srvcs = append(srvcs, telemetryManager)
 
 	backupCfg := cfg.Database().Backup()
