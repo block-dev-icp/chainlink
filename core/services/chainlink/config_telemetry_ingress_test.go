@@ -36,15 +36,6 @@ func TestTelemetryIngressConfig(t *testing.T) {
 }
 
 func TestTelemetryIngressConfig_ChipIngressEnabled(t *testing.T) {
-	t.Run("returns false when ChipIngressEnabled is nil", func(t *testing.T) {
-		config := &telemetryIngressConfig{
-			c: toml.TelemetryIngress{
-				ChipIngressEnabled: nil,
-			},
-		}
-		assert.False(t, config.ChipIngressEnabled())
-	})
-
 	t.Run("returns false when ChipIngressEnabled is explicitly false", func(t *testing.T) {
 		falseVal := false
 		config := &telemetryIngressConfig{
