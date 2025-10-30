@@ -4,7 +4,7 @@ go 1.25.3
 
 // Using a separate `require` here to avoid surrounding line changes
 // creating potential merge conflicts.
-require github.com/smartcontractkit/chainlink/v2 v2.0.0-20251020210257-0a6ec41648b4
+require github.com/smartcontractkit/chainlink/v2 v2.0.0-20251029232112-40873d707b3c
 
 // Make sure we're working with the latest chainlink libs
 replace github.com/smartcontractkit/chainlink/v2 => ../../
@@ -45,7 +45,7 @@ require (
 	github.com/smartcontractkit/chainlink-testing-framework/framework/components/fake v0.10.0
 	github.com/smartcontractkit/chainlink-testing-framework/lib v1.54.5
 	github.com/smartcontractkit/chainlink-testing-framework/seth v1.51.2
-	github.com/smartcontractkit/chainlink/deployment v0.0.0-20251021194914-c0e3fec1a97c
+	github.com/smartcontractkit/chainlink/deployment v0.0.0-20251029232112-40873d707b3c
 	github.com/smartcontractkit/crib-sdk v0.4.0
 	github.com/smartcontractkit/libocr v0.0.0-20251027221354-bdc84e1ed858
 	github.com/smartcontractkit/smdkg v0.0.0-20251028194008-216027277fe7
